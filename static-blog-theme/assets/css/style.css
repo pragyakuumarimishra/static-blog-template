@@ -1,0 +1,87 @@
+/* Basic responsive styling for the static blog theme */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header, footer {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    margin: 0 0 10px 0;
+}
+
+.post {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive menu toggle for small screens */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+    nav ul.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #eee;
+}
+
+body.dark-mode header, body.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode nav ul li a {
+    color: #eee;
+}
